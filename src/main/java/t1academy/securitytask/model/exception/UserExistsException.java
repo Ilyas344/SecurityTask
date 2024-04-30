@@ -1,2 +1,7 @@
-package t1academy.securitytask.model.exception;public class UserExistsException {
+package t1academy.securitytask.model.exception;
+
+public class UserExistsException extends RuntimeException {
+    public UserExistsException(String message) {
+        super(message);
+    }
 }

@@ -1,4 +1,4 @@
-package t1academy.securitytask.web.security;
+package t1academy.securitytask.model.security;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -6,7 +6,7 @@ import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import t1academy.securitytask.domain.user.User;
+import t1academy.securitytask.model.user.User;
 
 import java.util.Collection;
 import java.util.stream.Collectors;
@@ -32,7 +32,7 @@ public class AppUserDetails implements UserDetails {
 
     @Override
     public String getUsername() {
-        return user.getUsername();
+        return user.getEmail();
     }
 
     @Override

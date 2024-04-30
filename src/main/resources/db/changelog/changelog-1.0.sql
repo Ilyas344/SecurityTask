@@ -1,13 +1,16 @@
+--liquibase formatted sql
+
+--changeset Pro100:1
+--2024-04-25--create-table-users
 create table if not exists t_users
 (
     id       bigserial primary key,
-    name     varchar(255) not null,
     username varchar(255) not null unique,
     email    varchar(255) not null unique,
     password varchar(255) not null
 );
 
-
+--2024-04-25--create-table-users_roles
 create table if not exists t_users_roles
 (
     user_id bigint       not null,
